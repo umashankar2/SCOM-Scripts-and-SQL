@@ -66,6 +66,6 @@ foreach($maintsched in $maintscheds){
         $freqinterval = [int]$schedvs[8]
         $str = "Creating Maint Schedule: " + $name
         $str
-        New-SCOMMaintenanceSchedule -Name $name -Recursive $true -Enabled $true -MonitoringObjects $monobjs -ActiveStartTime $astart -ActiveEndDate $aend -Duration $dur -ReasonCode "PlannedOther" -Comments "Created from Powershell" -FreqType $freqtype -FreqInterval $freqinterval
+        Write-Ouput "New-SCOMMaintenanceSchedule -Name $name -Recursive $true -Enabled $true -MonitoringObjects $monobjs -ActiveStartTime $astart -ActiveEndDate $aend -Duration $dur -ReasonCode "PlannedOther" -Comments "Created from Powershell" -FreqType $freqtype -FreqInterval $freqinterval"
     }
 } 
